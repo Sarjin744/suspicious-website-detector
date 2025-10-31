@@ -1,0 +1,222 @@
+/* ==========================
+ 🌌 CYBERGLOW THEME - FINAL v3
+ ========================== */
+
+/* ===== GLOBAL BACKGROUND ===== */
+body {
+  background: linear-gradient(135deg, #0a0f1a, #111827, #0b132b);
+  background-image: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  color: #f1f5f9;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.5s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Smooth fade for UI elements */
+* {
+  transition: all 0.25s ease-in-out;
+}
+
+/* ===== HEADER BAR ===== */
+.header-bar {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1rem 0;
+  text-align: center;
+  color: #38bdf8;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+/* ===== CARD DESIGN ===== */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+/* ===== TABLE ===== */
+.table {
+  color: #e2e8f0;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.table thead th {
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: rgba(56, 189, 248, 0.05);
+}
+
+.table-striped > tbody > tr:hover {
+  background-color: rgba(56, 189, 248, 0.15);
+  transition: background 0.3s ease;
+}
+
+/* ===== INPUT FIELDS ===== */
+.form-control {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e2e8f0;
+  border-radius: 10px;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+/* Neon Gradient Primary Button */
+.btn-primary {
+  background: linear-gradient(90deg, #06b6d4, #0ea5e9, #3b82f6);
+  border: none;
+  color: #0a0a0f;
+  background-size: 300%;
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.6);
+}
+
+.btn-primary:hover {
+  background-position: right center;
+  box-shadow: 0 0 25px rgba(14, 165, 233, 0.9);
+  transform: scale(1.05);
+}
+
+/* Outline Info Button (used for theme toggle, etc.) */
+.btn-outline-info {
+  color: #00ffff;
+  border: 1px solid #00ffff;
+  background: transparent;
+}
+
+.btn-outline-info:hover {
+  background: #00ffff;
+  color: #0a0a0f !important;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+/* ===== BADGES ===== */
+.badge {
+  font-size: 0.9rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+/* ===== HEADINGS ===== */
+h2, h3, h4, h5 {
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.7);
+  letter-spacing: 0.5px;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #06b6d4, #3b82f6);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #3b82f6, #06b6d4);
+}
+
+/* ===== LIGHT MODE ===== */
+.light-mode {
+  background: linear-gradient(135deg, #f9fafb, #e2e8f0, #f1f5f9);
+  background-image: url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #1e293b;
+  transition: background 0.5s ease, color 0.3s ease;
+}
+
+.light-mode .card {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1e293b;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .header-bar {
+  background: rgba(241, 245, 249, 0.9);
+  color: #0f172a;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== DARK MODE ===== */
+.dark-mode {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #0a192f);
+  color: #f1f5f9;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+/* ===== GLOW BORDER EFFECT ===== */
+.glow-border {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00ffff, #3b82f6, #06b6d4, #00ffff);
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.6;
+  animation: glowRotate 6s linear infinite;
+}
+
+@keyframes glowRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
