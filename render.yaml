@@ -1,8 +1,9 @@
 services:
+  # 🌐 BACKEND SERVICE
   - type: web
     name: suspicious-backend
     env: node
-    plan: standard
+    plan: free               # use 'standard' if you want always-on
     branch: main
     buildCommand: cd backend && npm install
     startCommand: cd backend && node server.js
@@ -10,20 +11,22 @@ services:
       - key: PORT
         value: "5000"
       - key: MONGO_URI
-        value: "<PASTE_YOUR_MONGO_URI>"
+        value: "your_mongodb_atlas_connection_string"
       - key: JWT_SECRET
-        value: "<PASTE_YOUR_JWT_SECRET>"
+        value: "your_secret_key"
       - key: NODE_ENV
         value: production
     autoDeploy: true
 
-  - type: static
+  # 💻 FRONTEND SERVICE (React)
+  - type: web
     name: suspicious-frontend
+    env: static
     plan: free
     branch: main
     buildCommand: cd frontend && npm install && npm run build
-    publishPath: frontend/build
+    staticPublishPath: frontend/build
     envVars:
       - key: REACT_APP_API_BASE_URL
-        value: "https://suspicious-backend.onrender.com/api" # replace with actual once deployed
+        value: "https://suspicious-backend.onrender.com/api"
     autoDeploy: true
