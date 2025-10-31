@@ -1,9 +1,9 @@
 services:
-  # 🌐 BACKEND SERVICE
+  # 🌐 BACKEND SERVICE (Express + Node)
   - type: web
     name: suspicious-backend
     env: node
-    plan: free               # use 'standard' if you want always-on
+    plan: free                  # free is valid for backend web
     branch: main
     buildCommand: cd backend && npm install
     startCommand: cd backend && node server.js
@@ -18,11 +18,10 @@ services:
         value: production
     autoDeploy: true
 
-  # 💻 FRONTEND SERVICE (React)
+  # 💻 FRONTEND SERVICE (React static build)
   - type: web
     name: suspicious-frontend
     env: static
-    plan: free
     branch: main
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: frontend/build
