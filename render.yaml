@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: phishguard-backend
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && node server.js
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: MONGO_URI
+        value: "your_mongodb_atlas_connection_string"
+      - key: JWT_SECRET
+        value: "your_secret_key"
+      - key: NODE_ENV
+        value: production
+    autoDeploy: true
+
+  - type: static
+    name: phishguard-frontend
+    buildCommand: cd frontend && npm install && npm run build
+    publishPath: frontend/build
+    envVars:
+      - key: REACT_APP_API_BASE_URL
+        value: "https://phishguard-backend.onrender.com/api"
+    autoDeploy: true
