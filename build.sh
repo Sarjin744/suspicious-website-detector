@@ -1,8 +1,9 @@
 #!/bin/bash
-echo "🚀 Starting PhishGuard full build..."
-cd backend
-npm install
-cd ../frontend
-npm install
+set -e
+echo "Installing backend..."
+cd backend && npm install
+echo "Installing frontend..."
+cd ../frontend && npm install
+echo "Building frontend..."
 npm run build
-echo "✅ Build completed successfully!"
+echo "Build done"
